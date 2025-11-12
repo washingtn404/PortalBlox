@@ -1,0 +1,57 @@
+:root{
+  --bg:#0f1724;
+  --card:#0b1220;
+  --accent:#00aaff;
+  --text:#e6eef6;
+  --muted:#99a3b2;
+  --radius:12px;
+  --container-max:1100px;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  background:linear-gradient(180deg,#051126 0%, #07182a 100%);
+  color:var(--text);
+  min-height:100vh;
+  line-height:1.45;
+}
+
+.container{max-width:var(--container-max);margin:0 auto;padding:20px;}
+
+.site-header{padding:18px 0;border-bottom:1px solid rgba(255,255,255,0.03)}
+.logo{display:inline-block;font-size:20px;font-weight:700;color:var(--accent)}
+nav{float:right}
+nav a{color:var(--muted);text-decoration:none;margin-left:18px;padding:8px 10px;border-radius:8px}
+nav a.active, nav a:hover{color:var(--text);background:rgba(255,255,255,0.03)}
+
+.hero{padding:36px;background:linear-gradient(90deg, rgba(255,255,255,0.02), transparent);border-radius:14px;margin:18px 0}
+.hero.small{padding:20px}
+.hero h2{font-size:22px;margin-bottom:8px}
+.buttons{margin-top:12px}
+.btn{display:inline-block;background:var(--accent);color:#022; padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600;margin-right:10px}
+.btn.secondary{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--text)}
+
+.news-section{margin-top:18px}
+.news-list{display:grid;gap:12px}
+.news-item{background:var(--card);padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)}
+.news-item h4{margin-bottom:6px}
+.news-item p{color:var(--muted);font-size:14px}
+
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:18px}
+.card{background:var(--card);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)}
+.small-link{color:var(--accent);text-decoration:none;font-weight:600}
+
+.site-footer{margin-top:28px;padding:18px 0;border-top:1px solid rgba(255,255,255,0.03);text-align:center;color:var(--muted);font-size:14px}
+
+.game-list{list-style:none;margin-top:10px}
+.game-list li{background:linear-gradient(90deg, rgba(255,255,255,0.01), transparent);padding:12px;border-radius:10px;margin-bottom:8px}
+
+.back-home{margin-top:18px}
+
+/* Responsive */
+@media(max-width:720px){
+  nav{float:none;margin-top:12px;text-align:right}
+  .hero h2{font-size:18px}
+  .container{padding:12px}
+}
